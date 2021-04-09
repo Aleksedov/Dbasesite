@@ -1,0 +1,44 @@
+{% extends 'dbase/layout_one_person.html' %}
+{% block title_object %}
+{{ victim.name }}
+{% endblock %}
+
+{% block inf %}
+        {% if  victim.date_of_birth != None %}
+            <p>{{ victim.date_of_birth }}</p>
+        {% endif %}
+        {% if  victim.place != None %}
+            <p>{{ victim.place }}</p>
+        {% endif %}
+        {% if  victim.restriction != None %}
+            <p>{{ victim.restriction }}</p>
+        {% endif %}
+        {% if  victim.biography != None %}
+            <p>{{ victim.biography }}</p>
+        {% endif %}
+
+{% endblock %}
+
+{% block body %}
+<div class = 'преследования'>
+     <h2>Преследования пострадавшего</h2>
+        {% for pers in persequtions_list %}
+            <dt>
+            <li><a href ="{% url 'persecution' pers.id %}">{{ pers }} <a/></li>
+            <ul>Статус: {{ pers.status }}</ul>
+           </dt>
+        {% endfor %}
+
+<div/>
+
+{% endblock %}
+
+{% block filtres %}
+    <h2>Фильтры</h2>
+    <form action="{{ pers.id }}" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <p></p>
+        <input type="submit" value="Select">
+    </form>
+{% endblock %}

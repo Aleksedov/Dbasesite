@@ -1,0 +1,17 @@
+{% extends 'dbase/layout_person.html' %}
+
+{% block title_list_objects %}
+{{ head }}
+{% endblock %}
+
+{% block body %}
+    <h1>{{ head }}</h1>
+
+    {% for pers in list_of_pers %}
+        <div class="victim">
+            <li><a href="{% url 'victim' pers.id %}">{{ pers.name }}</li>
+
+        </div>
+    {% endfor %}
+
+{% endblock %}

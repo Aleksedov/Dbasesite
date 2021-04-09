@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(210,210,210);
+}
+aside {
+    float: left;
+    background: rgb(230,230,230);
+    border-right: 5px solid rgb(30,130,120);
+    border-bottom: 5px solid rgb(30,130,120);
+    height: 100%;
+    width: 30%;
+    padding: 10px;
+
+}
+aside div img {
+    width: 40px;
+
+}
+
+aside h3 {
+    font-size: 20px
+}
+
+
+aside span {
+    font-size: 40px;
+    margin-left: 10px;
+    position: relative;
+    top: 10px;
+}
+
+aside div.logo {
+    height: 70px;
+    padding: 5px;
+}
+aside ul {list-style: none}
+aside ul li{
+    display: block;
+    margin-top: 10px;
+    transition: transform .6s easy;
+}
+
+aside ul li:hover, aside ul a:hover {
+    color: rgb(30,130,120);
+    transform: scale(1.05);
+
+}
+aside .filters h2 {
+    font-size: 20px;
+}
+aside .filters label {
+    font-size: 12px;
+    width: 200px;
+    position: relative;
+    top:8px;
+}
+
+aside .filters select {
+    width: 200px;
+}
+aside .filters input {
+    background-color: rgb(30,130,120);
+    color: white;
+    font-size: 16px;
+}
+main {
+    float: right;
+    height: 100%;
+    width: 70%;
+    padding-left: 20px;
+}
+
+main h3 {
+    font-size: 16px;
+}
+
+main .person {
+    float: left;
+    display: block;
+    border: 2px solid rgb(30,130,120);
+    width: 400px;
+    height: 105px;
+}
+main .person img {
+    float: left;
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+
+main .person_data {
+    float: right;
+    width: 280px;
+    height: 100px;
+    display: inline;
+}
+
+main .person_data li {
+    font-size: 12px;
+}
